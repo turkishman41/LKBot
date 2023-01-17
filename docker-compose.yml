@@ -11,7 +11,18 @@ services:
        - API_HASH=e83e839202 # change this to your HASH
        - BOT_TOKEN=token # enter your bot token
        - BIN_CHANNEL=ID # paste channel ID
+       - WORKERS=3
+       - SLEEP_THRESHOLD=6
+       - NO_PORT=true
+       - HAS_SSL=false
+       - PORT=8182
+       - HASH_LENGTH=6
+       - BIND_ADDRESS=
+       - FQDN=
+       - KEEP_ALIVE=1
+       - USE_SESSION_FILE=true
+       - PING_INTERVAL=1200
       ports:
-       - 127.0.0.1:8000:8000
+       - 127.0.0.1:8182:8182
       volumes:
        - $HOME/TG-FileStreamBot:/app/.env
